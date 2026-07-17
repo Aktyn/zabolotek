@@ -219,9 +219,8 @@
 
   body {
     @apply bg-background text-foreground;
-    @apply h-dvh w-full grid grid-cols-[auto_1fr] grid-rows-1 items-stretch overflow-y-auto overflow-x-auto;
+    @apply h-dvh w-full overflow-y-auto overflow-x-auto;
   }
-
 
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
