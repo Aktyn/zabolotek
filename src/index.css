@@ -159,50 +159,51 @@
 
 @layer base {
   :root {
-    /* Colors are from https://catppuccin.com/palette/ (Mocha) */
-    /* --background-lighter: 240 21% 15%; */
-    --background-lighter: 237 16% 23%;
-    --background: 240 21% 12%;
-    --background-darker: 240 23% 9%;
+    /* White & Green Palette */
+    /* Main colors: #024d19 (dark green), #68b80e (bright green), #f7f7eb (cream) */
 
-    --foreground: 226 64% 88%;
-    --foreground-lighter: 226 64% 95%;
+    --background-lighter: 0 0% 100%;        /* #ffffff */
+    --background: 60 47% 94%;               /* #f7f7eb */
+    --background-darker: 60 20% 88%;        /* #e8e8d8 */
 
-    --muted: 237 16% 23%;
-    --muted-foreground: 237 16% 64%;
+    --foreground: 138 95% 15%;              /* #024d19 */
+    --foreground-lighter: 138 65% 27%;      /* #1a6b2e */
 
-    --popover: 240 21% 12%;
-    --popover-foreground: 226 64% 88%;
+    --muted: 138 50% 90%;                   /* #e8f5e9 */
+    --muted-foreground: 138 25% 40%;        /* #4a7c59 */
 
-    --card: 240 21% 15%;
-    --card-foreground: 226 64% 88%;
+    --popover: 0 0% 100%;                   /* #ffffff */
+    --popover-foreground: 138 95% 15%;      /* #024d19 */
 
-    --border: 234 13% 31%;
-    --input: 234 13% 31%;
+    --card: 0 0% 100%;                      /* #ffffff */
+    --card-foreground: 138 95% 15%;         /* #024d19 */
 
-    --primary: 189 71% 73%;
-    --primary-foreground: 189 71% 15%;
+    --border: 138 40% 80%;                  /* #c8e6c9 */
+    --input: 138 40% 80%;                   /* #c8e6c9 */
 
-    --secondary: 267 84% 81%;
-    --secondary-foreground: 240 21% 15%;
+    --primary: 88 86% 39%;                  /* #68b80e */
+    --primary-foreground: 0 0% 100%;        /* #ffffff */
 
-    --accent: 267 84% 81%;
-    --accent-foreground: 267 84% 95%;
+    --secondary: 138 45% 88%;               /* #d4edda */
+    --secondary-foreground: 138 95% 15%;    /* #024d19 */
 
-    --destructive: 343 81% 75%;
-    --destructive-foreground: 343 81% 90%;
+    --accent: 88 86% 39%;                   /* #68b80e */
+    --accent-foreground: 0 0% 100%;         /* #ffffff */
 
-    --warning: 23 92% 75%;
-    --warning-foreground: 23 92% 90%;
+    --destructive: 359 75% 47%;             /* #c62828 */
+    --destructive-foreground: 0 0% 100%;    /* #ffffff */
 
-    --info: 217 92% 76%;
-    --info-foreground: 217 92% 90%;
+    --warning: 45 90% 52%;                  /* #f57f17 */
+    --warning-foreground: 45 90% 10%;       /* dark amber */
 
-    --success: 115 54% 76%;
-    --success-foreground: 115 54% 15%;
-    --success-foreground-light: 115 54% 90%;
+    --info: 198 97% 37%;                    /* #0277bd */
+    --info-foreground: 0 0% 100%;           /* #ffffff */
 
-    --ring: 199 76% 69%;
+    --success: 88 86% 39%;                  /* #68b80e */
+    --success-foreground: 0 0% 100%;        /* #ffffff */
+    --success-foreground-light: 138 95% 15%; /* #024d19 */
+
+    --ring: 88 86% 39%;                     /* #68b80e */
 
     --radius: 0.5rem;
   }
@@ -218,8 +219,9 @@
 
   body {
     @apply bg-background text-foreground;
-    @apply h-screen w-screen grid grid-cols-[auto_1fr] grid-rows-1 items-stretch overflow-hidden;
+    @apply h-dvh w-full grid grid-cols-[auto_1fr] grid-rows-1 items-stretch overflow-y-auto overflow-x-auto;
   }
+
 
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
