@@ -137,6 +137,10 @@ export function SpecialMessage() {
           {decode(
             "SmFrJTIwY28lQzUlOUIlMjB0byUyMG9kY3p5dHVqJUM0JTk5JTIwU01TeQ==",
           )}
+          <br />
+          <p className="text-xs mt-2 text-blue-700">
+            O której kończysz pracę w środę?
+          </p>
         </div>
 
         <hr />

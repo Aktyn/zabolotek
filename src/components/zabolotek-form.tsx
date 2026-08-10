@@ -1,6 +1,7 @@
 import { clamp, cn, shuffle } from "@/lib/utils"
 import { useMemo, useState } from "react"
 import { ResultIndicator } from "./results-indicator"
+import { PostConfirmContent } from "./post-confirm-content"
 
 const NUMBERS_COUNT = 6
 const MINIMUM_MATCHES = 1
@@ -175,16 +176,17 @@ export function ZabolotekForm({
         </div>
       </div>
       {confirmed && (
-        <div
-          id={resultInfoId}
-          className="animate-in fade-in fill-mode-both flex flex-col items-center gap-2 contain-inline-size w-full"
-        >
+        <div className="animate-in fade-in fill-mode-both flex flex-col items-center gap-2 contain-inline-size w-full">
           <img
             src="/zabolotek/zabolotek-logo.png"
             alt="Żabolotek logo"
             className="h-32"
           />
-          <div className="text-center text-pretty font-medium w-lg max-w-full">
+
+          <div
+            id={resultInfoId}
+            className="text-center text-pretty font-medium w-lg max-w-full"
+          >
             Gratulacje!
             <br />
             Zgadłeś/aś <b>{guessedCount}</b> liczb
@@ -193,6 +195,8 @@ export function ZabolotekForm({
             Zrób zdjęcie lub screenshot powyższego formularza po czym prześlij
             je do Żabosława!
           </div>
+
+          <PostConfirmContent />
         </div>
       )}
       <button
