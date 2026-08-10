@@ -304,4 +304,8 @@
   table {
     @apply w-full caption-bottom text-sm;
   }
+
+  hr {
+    @apply border-foreground/25;
+  }
 }

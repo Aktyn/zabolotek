@@ -7,7 +7,13 @@ const MINIMUM_MATCHES = 1
 const confirmButtonId = "apply-button"
 const resultInfoId = "result-info"
 
-export function ZabolotekForm() {
+type ZabolotekFormType = {
+  onSpecialMessageActivated: () => void
+}
+
+export function ZabolotekForm({
+  onSpecialMessageActivated,
+}: ZabolotekFormType) {
   const [touched, setTouched] = useState(false)
   const [inputValues, setInputValues] = useState<
     Array<string> & { length: typeof NUMBERS_COUNT }
@@ -48,6 +54,11 @@ export function ZabolotekForm() {
   const confirm = () => {
     if (confirmed) {
       console.error("Already confirmed")
+      return
+    }
+
+    if (inputValues.join("") === "13 37 67 28 30 55".replace(/\s/g, "")) {
+      onSpecialMessageActivated()
       return
     }
 

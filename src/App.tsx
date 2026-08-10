@@ -1,7 +1,15 @@
+import { useState } from "react"
 import { AuthorLink } from "./components/author-link"
+import { SpecialMessage } from "./components/special-message"
 import { ZabolotekForm } from "./components/zabolotek-form"
 
 function App() {
+  const [showSpecialMessage, setShowSpecialMessage] = useState(false)
+
+  if (showSpecialMessage) {
+    return <SpecialMessage />
+  }
+
   return (
     <div className="flex flex-col items-center justify-start gap-6 w-full h-screen text-center bg-background py-4 px-4">
       <section className="bg-background-darker p-4 rounded-lg inline-flex flex-col gap-4">
@@ -25,7 +33,9 @@ function App() {
           </li>
         </ul>
       </section>
-      <ZabolotekForm />
+      <ZabolotekForm
+        onSpecialMessageActivated={() => setShowSpecialMessage(true)}
+      />
       <footer className="mt-auto text-xs text-foreground-lighter p-4">
         Sponsorem loterii jest <AuthorLink>Żabosław Krajewski</AuthorLink>
       </footer>
